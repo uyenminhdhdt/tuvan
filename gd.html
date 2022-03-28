@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<img src="d:/image.jpg" alt="Trang web công nghệ"
+style="width:500px;height:600px;">
+</a>
+
+<body style="background-color:DodgerBlue;">
+ <div class="login">
+	<h1><b>DỰ ĐOÁN CHỌN NGÀNH HỌC CHO THÍ SINH </b></h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+	<label for="So1"><b>BẠN HÃY CUNG CẤP CÁC THÔNG TIN CẦN THIẾT CHO VIỆC DỰ ĐOÁN NHƯ MẪU BÊN DƯỚI><b><br><br> 	
+	<label for="So1">Địa chỉ:</> 
+    		<input type="text" name="Địa chỉ" placeholder="Địa chỉ" required="required" ><br><br>
+	<label for="So1">Giới tính:</> 
+	        <input type="text" name="Giới tính" placeholder="Giới tính" required="required" ><br><br>
+	<label for="So1">Ngành học yêu thích:</> 
+		<input type="text" name="Ngành học yêu thích" placeholder="Ngành học yêu thích" required="required" ><br><br>
+	<label for="So1">Kết quả học ở THPT:</> 
+        	<input type="text" name="Kết quả học ở THPT" placeholder="Kết quả học ở THPT" required="required" ><br><br>
+	<label for="So1">Hình thức xét tuyển:</> 
+		<input type="text" name="Hình thức xét tuyển" placeholder="Hình thức xét tuyển" required="required" ><br><br>
+	<label for="So1">Ngàn muốn học ở đại học:</> 
+        	<input type="text" name="Ngàn muốn học ở đại học" placeholder="Ngàn muốn học ở đại học" required="required" ><br><br>
+	<label for="So1">Khả năng cá nhân:</> 
+		<input type="text" name="Khả năng cá nhân" placeholder="Khả năng cá nhân" required="required" ><br><br>
+	
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Chọn chức năng dự đoán</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
