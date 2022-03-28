@@ -1,1 +1,1 @@
-<?php include_once("gt.html"); ?>
+<?php include_once("gd.html"); ?>
